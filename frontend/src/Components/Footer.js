@@ -12,10 +12,10 @@ const Footer = () => {
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item xs={12} sm={6} className="text-center sm:text-left">
             <h3 className="font-bold text-2xl">
-              BigSpring
+              ImageSegmentation
             </h3>
             <Typography variant="body2" className="text-gray-100 mt-1">
-              A place for innovative solutions
+              A place to remove whatever you want from your pictures in a single click.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} className="text-center sm:text-right">
@@ -34,7 +34,7 @@ const Footer = () => {
               </IconButton>
             </div>
             <Typography variant="body2" className="text-gray-100">
-              &copy; {new Date().getFullYear()} BigSpring. All rights reserved.
+              &copy; {new Date().getFullYear()} ImageSegmentation. All rights reserved.
             </Typography>
           </Grid>
         </Grid>

@@ -13,13 +13,14 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import IGlogo from '../assets/IGlogo.png';
 
 const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const menuItems = ["Home", "Blog", "Pricing", "Contact", "FAQ"];
+  const menuItems = ["Home", "Try", "FAQ"];
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -74,13 +75,18 @@ const Navbar = () => {
               aria-label="menu"
               onClick={toggleDrawer(true)}
             >
-              <MenuIcon style={{ color: "#00a7a3" }} />
+            <MenuIcon style={{ color: "#00a7a3" }} />
             </IconButton>
             <Typography
               variant="h6"
               style={{ flexGrow: 1, textAlign: "center" ,fontWeight: "bold" ,}}
             >
-              <span className="text-[#00a7a3]">d</span><span className="text-orange-400">b </span>Bigspring
+            <div className="flex">
+            <img src={IGlogo} alt="logo" className="w-9 h-9"/>
+            <h3 className="font-bold ml-1 text-2xl">
+              <span className="text-[#144cf5]">Image</span><span className="text-black">Segmentor </span>
+            </h3>
+          </div>
             </Typography>
             <button className="w-[120px] bg-[#00a7a3] h-[40px] my-3 flex items-center justify-center rounded-full cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#007a75] before:to-[#005c54] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
               Get Started
@@ -101,10 +107,12 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <h3 className="font-bold ml-10 text-2xl">
-                <span className="text-[#00a7a3]">d</span><span className="text-orange-400">b </span>
-  Bigspring
-</h3>
+          <div className="flex">
+            <img src={IGlogo} alt="logo" className="w-9 h-9"/>
+            <h3 className="font-bold ml-1 text-2xl">
+              <span className="text-[#144cf5]">Image</span><span className="text-black">Segmentor </span>
+            </h3>
+          </div>
 
             <div
               style={{ display: "flex", justifyContent: "center", flexGrow: 1 }}
