@@ -84,7 +84,7 @@ const Navbar = () => {
             <div className="flex">
             <img src={IGlogo} alt="logo" className="w-9 h-9"/>
             <h3 className="font-bold ml-1 text-2xl">
-              <span className="text-[#144cf5]">Image</span><span className="text-black">Segmentor </span>
+              <span className="text-[#104384]">Image</span><span className="text-black">Segmentor </span>
             </h3>
           </div>
             </Typography>
@@ -110,7 +110,7 @@ const Navbar = () => {
           <div className="flex">
             <img src={IGlogo} alt="logo" className="w-9 h-9"/>
             <h3 className="font-bold ml-1 text-2xl">
-              <span className="text-[#144cf5]">Image</span><span className="text-black">Segmentor </span>
+              <span className="text-[#24B1EB]">Image</span><span className="text-black">Segmentor </span>
             </h3>
           </div>
 

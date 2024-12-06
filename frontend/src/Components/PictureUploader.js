@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import {FaTimes} from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const PictureUploader = () => {
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [uploadedFiles, setUploadedFiles] = useState([]);
+  const navigate = useNavigate();
 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
@@ -54,6 +56,10 @@ const PictureUploader = () => {
 
   const deleteFile = (index) => {
     setUploadedFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleDoneClick = () => {
+    navigate("/summary", { state: { uploadedFiles } });
   };
 
   return (
@@ -115,6 +121,16 @@ const PictureUploader = () => {
           </div>
         ))}
       </div>
+
+      {/* Done Button */}
+      {uploadedFiles.length > 0 && (
+        <button
+          className="mt-6 bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-700"
+          onClick={handleDoneClick}
+        >
+          Done
+        </button>
+      )}
     </div>
   );
 };

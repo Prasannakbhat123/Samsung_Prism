@@ -20,7 +20,7 @@ const TopText = () => {
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
   return (
-    <div className="bg-blue-500 text-white text-center py-4">
+    <div className="bg-[#104384] text-white text-center py-4">
       <p className="text-lg font-semibold inline-block">
         {displayText}
         <span className="cursor-blink">|</span>
