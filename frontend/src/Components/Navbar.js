@@ -65,7 +65,8 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
+    <AppBar position="static" color="transparent" elevation={0} style={{ boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}>
+
       <Toolbar>
         {isMobile ? (
           <>
